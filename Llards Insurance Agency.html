@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Llards Insurance Agency | Insurance &amp; Financial Services</title>
+<meta name="description" content="Llards Insurance Agency: medical, accident, education, staff and pension cover plus money-market investments. Protection Today. A Brighter Tomorrow.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#173F85; --blue-deep:#0F2C61; --brick:#8E2B1F; --sun:#F5C842;
+  --bg:#FBF8F1; --card:#FFFFFF; --sky:#E4EEFA; --ink:#14213D; --muted:#4A5675; --line:#D5DDEC;
+  --serif:"Fraunces",Georgia,"Times New Roman",serif; --sans:"Figtree","Segoe UI",system-ui,sans-serif;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --blue:#7FA6EA; --blue-deep:#0B1B3C; --brick:#E58A78; --bg:#0E1626; --card:#16213A; --sky:#12203B; --ink:#EAF0FB; --muted:#A9B6D3; --line:#2B3A5C;}}
+:root[data-theme="dark"]{
+  --blue:#7FA6EA; --blue-deep:#0B1B3C; --brick:#E58A78; --bg:#0E1626; --card:#16213A; --sky:#12203B; --ink:#EAF0FB; --muted:#A9B6D3; --line:#2B3A5C;}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 var(--sans)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--serif);line-height:1.12;margin:0}
+
+/* header */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand b{font:800 1.15rem/1 var(--serif);color:var(--brick);letter-spacing:.01em}
+.brand small{display:block;font:500 .7rem/1.2 var(--sans);color:var(--blue)}
+nav{display:flex;gap:22px;align-items:center}
+nav a{text-decoration:none;font-weight:500;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+.btn{display:inline-block;background:var(--blue);color:#fff;padding:11px 20px;border-radius:999px;font-weight:600;text-decoration:none;border:0;cursor:pointer;font-size:1rem;font-family:inherit}
+.btn:hover{background:var(--blue-deep)}
+:root[data-theme="dark"] .btn{color:#0B1B3C}
+.btn.sun{background:var(--sun);color:#14213D}
+.btn.sun:hover{background:#ffd966}
+@media(max-width:720px){nav a:not(.btn){display:none}}
+
+/* hero */
+.hero{background:var(--blue-deep);color:#fff;position:relative;overflow:hidden}
+.hero .wrap{padding-top:72px;padding-bottom:84px;display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(2.4rem,6vw,4.4rem);font-weight:800}
+.hero h1 span{display:block;color:var(--sun)}
+.hero p{max-width:34em;color:#D6E2F7;font-size:1.15rem;margin:22px 0 30px}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+.hero .ghost{background:transparent;border:2px solid #fff;color:#fff;padding:9px 20px}
+.hero .ghost:hover{background:#fff;color:var(--blue-deep)}
+.shield{width:100%;max-width:320px;justify-self:center}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:10px;background:linear-gradient(90deg,var(--sun) 0 33%,var(--brick) 33% 66%,#4C86D9 66%)}
+@media(max-width:820px){.hero .wrap{grid-template-columns:1fr}.shield{max-width:200px;order:-1;justify-self:start}}
+
+/* services */
+section{padding:76px 0}
+.head{max-width:40em;margin-bottom:28px}
+.head h2{font-size:clamp(1.9rem,4vw,2.8rem);color:var(--blue)}
+.head p{color:var(--muted);margin:12px 0 0}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}
+.tabs button{font:600 .98rem var(--sans);padding:9px 18px;border-radius:999px;border:2px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.tabs button[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:#fff}
+:root[data-theme="dark"] .tabs button[aria-pressed="true"]{color:#0B1B3C}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-top:5px solid var(--blue);border-radius:10px;padding:24px 22px}
+.card:nth-child(3n+2){border-top-color:var(--brick)}
+.card:nth-child(3n){border-top-color:var(--sun)}
+.card svg{width:44px;height:44px;stroke:var(--blue);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;margin-bottom:14px}
+.card h3{font-size:1.25rem;margin-bottom:8px}
+.card p{margin:0 0 14px;color:var(--muted);font-size:1rem}
+.card a{font-weight:600;color:var(--brick);text-underline-offset:3px}
+.note{margin-top:26px;font-size:.92rem;color:var(--muted)}
+
+/* why */
+.why{background:var(--sky)}
+.why ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px}
+.why h3{font-size:1.2rem;color:var(--brick);margin-bottom:6px}
+.why p{margin:0;color:var(--muted)}
+
+/* contact */
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+@media(max-width:820px){.contact .wrap{grid-template-columns:1fr}}
+.details{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:16px}
+.details b{display:block;font-family:var(--serif);color:var(--blue)}
+form{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:26px;display:grid;gap:14px}
+label{font-weight:600;font-size:.95rem;display:grid;gap:6px}
+input,select,textarea{font:inherit;padding:11px 12px;border:1.5px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);width:100%}
+textarea{min-height:90px;resize:vertical}
+footer{background:var(--blue-deep);color:#C9D8F2;padding:34px 0;font-size:.95rem}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer b{font-family:var(--serif);color:#fff}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Llards Insurance Agency home">
+      <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><path d="M4 36 L18 6 H25 L13 36Z" fill="#173F85"/><path d="M16 36 L26 16 L36 36 H29 L26 29 L23 36Z" fill="#8E2B1F"/></svg>
+      <span><b>LLARDS</b><small>Insurance Agency</small></span>
+    </a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#why">Why Llards</a>
+      <a href="#contact">Contact</a>
+      <a class="btn" href="#contact">Get a quote</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Protection Today.<span>A Brighter Tomorrow.</span></h1>
+        <p>Insurance and financial services for children, families, drivers, schools and employers. Cover what matters today and save for what comes next.</p>
+        <div class="cta">
+          <a class="btn sun" href="#services">See all services</a>
+          <a class="btn ghost" href="#contact">Request a quote</a>
+        </div>
+      </div>
+      <svg class="shield" viewBox="0 0 200 230" role="img" aria-label="Shield with a check mark">
+        <path d="M100 8 L180 38 V110 C180 160 146 196 100 222 C54 196 20 160 20 110 V38Z" fill="#173F85" stroke="#F5C842" stroke-width="6"/>
+        <path d="M62 112 L90 140 L142 82" fill="none" stroke="#fff" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="head">
+        <h2>Insurance &amp; financial services</h2>
+        <p>Eight ways Llards Insurance Agency helps you and your family build greater security. Filter by who the cover is for.</p>
+      </div>
+      <div class="tabs" role="group" aria-label="Filter services">
+        <button type="button" data-f="all" aria-pressed="true">All services</button>
+        <button type="button" data-f="family" aria-pressed="false">Families</button>
+        <button type="button" data-f="staff" aria-pressed="false">Schools &amp; staff</button>
+        <button type="button" data-f="savings" aria-pressed="false">Savings &amp; investments</button>
+      </div>
+      <div class="grid" id="grid" aria-live="polite"></div>
+      <p class="note">Benefits, limits and premiums are set out in each policy document. Contact us for a quote that fits your needs.</p>
+    </div>
+  </section>
+
+  <section class="why" id="why">
+    <div class="wrap">
+      <div class="head"><h2>Insurance protects futures</h2></div>
+      <ul>
+        <li><h3>Cover for every stage</h3><p>From a child's first school year to staff retirement, there is a product for each stage of life.</p></li>
+        <li><h3>One agency, many needs</h3><p>Medical, accident, education, pension and investment services handled in one place.</p></li>
+        <li><h3>Made for schools and parents</h3><p>Group covers for institutions and simple individual plans for families.</p></li>
+        <li><h3>Local and easy to reach</h3><p>Visit us in Buruburu, call, or send a message and we will respond.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div>
+        <div class="head"><h2>Talk to us about cover</h2><p>Tell us what you need and we will get back to you with options.</p></div>
+        <ul class="details">
+          <li><b>Location</b>Mumius South Road, Buruburu (opposite Thomas Burke Schools)</li>
+          <li><b>Mobile</b><a href="tel:+254722711631">0722 711 631</a></li>
+          <li><b>Email</b><a href="mailto:maryfaybookshop@gmail.com">maryfaybookshop@gmail.com</a></li>
+        </ul>
+      </div>
+      <form id="quote">
+        <label>Your name<input name="name" required autocomplete="name"></label>
+        <label>Phone number<input name="phone" type="tel" required autocomplete="tel"></label>
+        <label>Service you are interested in
+          <select name="service" id="svc"></select>
+        </label>
+        <label>Message (optional)<textarea name="msg"></textarea></label>
+        <button class="btn" type="submit">Send on WhatsApp</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><b>Llards Insurance Agency</b><br>Protection Today. A Brighter Tomorrow.</div>
+    <div>Together We Grow<br>&copy; <span id="yr"></span> Llards Insurance Agency Ltd</div>
+  </div>
+</footer>
+
+<script>
+const ICON = {
+  shield:'<path d="M24 4 40 10v14c0 10-7 16-16 20C15 40 8 34 8 24V10z"/><circle cx="24" cy="20" r="4"/><path d="M17 31c1-4 4-5 7-5s6 1 7 5"/>',
+  cross:'<rect x="6" y="6" width="36" height="36" rx="8"/><path d="M24 14v20M14 24h20"/>',
+  people:'<circle cx="24" cy="16" r="5"/><circle cx="11" cy="20" r="4"/><circle cx="37" cy="20" r="4"/><path d="M14 38c0-7 4-10 10-10s10 3 10 10M3 34c0-5 3-7 7-7M45 34c0-5-3-7-7-7"/>',
+  cap:'<path d="M3 17 24 8l21 9-21 9z"/><path d="M12 22v10c0 3 6 6 12 6s12-3 12-6V22M45 17v13"/>',
+  car:'<path d="M7 28 11 16c1-3 3-4 6-4h14c3 0 5 1 6 4l4 12v8H7z"/><circle cx="14" cy="30" r="2.5"/><circle cx="34" cy="30" r="2.5"/><path d="M11 22h26M10 36v4M38 36v4"/>',
+  badge:'<circle cx="24" cy="15" r="7"/><path d="M8 42c0-10 7-15 16-15s16 5 16 15z"/><path d="M24 29v7"/>',
+  coins:'<ellipse cx="24" cy="12" rx="14" ry="5"/><path d="M10 12v8c0 3 6 5 14 5s14-2 14-5v-8M10 20v8c0 3 6 5 14 5s14-2 14-5v-8M10 28v8c0 3 6 5 14 5s14-2 14-5v-8"/>',
+  chart:'<path d="M6 6v36h36"/><path d="m12 32 9-10 7 6 12-16"/><path d="M33 12h7v7"/>'
+};
+const S = [
+ {t:"Personal Accident Cover (Children)",d:"Financial support for your child's accident-related medical costs and injuries, in school and out.",i:"shield",g:["family"]},
+ {t:"Individual Medical Insurance",d:"Health cover for you and your family so treatment is never delayed by cost.",i:"cross",g:["family"]},
+ {t:"Corporate Medical Insurance",d:"Medical cover for the employees of your school, company or organisation.",i:"people",g:["staff"]},
+ {t:"Education Policy (Children)",d:"A disciplined way to save so school fees stay covered through every level of education.",i:"cap",g:["family","savings"]},
+ {t:"Personal Accident Cover (Drivers)",d:"Protection for drivers, including school bus and staff drivers, against accident injury.",i:"car",g:["staff"]},
+ {t:"GPA / WIBA Staff Cover",d:"Group Personal Accident and Work Injury Benefits Act cover for your employees.",i:"badge",g:["staff"]},
+ {t:"Institutional Pensions",d:"Retirement benefit schemes that help schools and institutions look after their staff.",i:"coins",g:["staff","savings"]},
+ {t:"Money-Market Investments",d:"Grow savings in a money-market fund. Available to staff and parents.",i:"chart",g:["savings"]}
+];
+const grid=document.getElementById('grid'), svc=document.getElementById('svc');
+function render(f){
+  grid.innerHTML=S.filter(s=>f==='all'||s.g.includes(f)).map(s=>
+   `<article class="card"><svg viewBox="0 0 48 48" aria-hidden="true">${ICON[s.i]}</svg><h3>${s.t}</h3><p>${s.d}</p><a href="#contact" data-s="${s.t}">Ask about this cover</a></article>`).join('');
+}
+render('all');
+svc.innerHTML='<option>General enquiry</option>'+S.map(s=>`<option>${s.t}</option>`).join('');
+document.querySelector('.tabs').addEventListener('click',e=>{
+  const b=e.target.closest('button'); if(!b) return;
+  document.querySelectorAll('.tabs button').forEach(x=>x.setAttribute('aria-pressed',x===b));
+  render(b.dataset.f);
+});
+grid.addEventListener('click',e=>{const a=e.target.closest('a[data-s]'); if(a) svc.value=a.dataset.s;});
+document.getElementById('quote').addEventListener('submit',e=>{
+  e.preventDefault();
+  const f=new FormData(e.target);
+  const text=`Hello Llards Insurance Agency, my name is ${f.get('name')} (${f.get('phone')}). I am interested in: ${f.get('service')}. ${f.get('msg')||''}`;
+  window.open('https://wa.me/254722711631?text='+encodeURIComponent(text),'_blank','noopener');
+});
+document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
